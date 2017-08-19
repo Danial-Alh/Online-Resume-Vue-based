@@ -1,40 +1,42 @@
 <template>
-  <div id="rightPanel">
-    <div class="sectionTitle">
-      <span class="material-icons sectionIcon">school</span>
-      <span class="titleName">Education</span>
+  <div>
+    <div id="rightPanel" >
+      <div class="sectionTitle">
+        <span class="material-icons sectionIcon">school</span>
+        <span class="titleName">Education</span>
+      </div>
+      <ul class="timeline">
+        <li>
+          <div v-for="(education, index) in educations" :education="education" :key="index" :is="education.layout"/>
+        </li>
+      </ul>
+      <div class="sectionTitle">
+        <span class="material-icons sectionIcon">add</span>
+        <span class="titleName">Interests</span>
+      </div>
+      <h3>Machine Learning</h3>
+      <h3>Data Science</h3>
+      <h3>Robotics</h3>
+      <h3>Programming Languages</h3>
+      <div class="sectionTitle">
+        <span class="material-icons sectionIcon">code</span>
+        <span class="titleName">Experience</span>
+      </div>
+      <ul class="timeline">
+        <li>
+          <div v-for="(experience, index) in experiences" :itemData="experience" :key="index" :is="experience.layout"/>
+        </li>
+      </ul>
+      <div class="sectionTitle">
+        <span class="material-icons sectionIcon">beenhere</span>
+        <span class="titleName">Honors & Awards</span>
+      </div>
+      <ul class="timeline">
+        <li>
+          <div v-for="(honor, index) in honors" :itemData="honor" :key="index" :is="honor.layout"/>
+        </li>
+      </ul>
     </div>
-    <ul class="timeline">
-      <li>
-        <div v-for="(education, index) in educations" :education="education" :key="index" :is="education.layout"/>
-      </li>
-    </ul>
-    <div class="sectionTitle">
-      <span class="material-icons sectionIcon">add</span>
-      <span class="titleName">Interests</span>
-    </div>
-    <h3>Machine Learning</h3>
-    <h3>Data Science</h3>
-    <h3>Robotics</h3>
-    <h3>Programming Languages</h3>
-    <div class="sectionTitle">
-      <span class="material-icons sectionIcon">code</span>
-      <span class="titleName">Experience</span>
-    </div>
-    <ul class="timeline">
-      <li>
-        <div v-for="(experience, index) in experiences" :itemData="experience" :key="index" :is="experience.layout"/>
-      </li>
-    </ul>
-    <div class="sectionTitle">
-      <span class="material-icons sectionIcon">beenhere</span>
-      <span class="titleName">Honors & Awards</span>
-    </div>
-    <ul class="timeline">
-      <li>
-        <div v-for="(honor, index) in honors" :itemData="honor" :key="index" :is="honor.layout"/>
-      </li>
-    </ul>
   </div>
 </template>
 
@@ -46,11 +48,24 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (max-width: 768px) {
+  #rightPanel {
+    margin: 5% 5% 5% 0%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #rightPanel {
+    padding: 5% 5% 5% 5%;
+    margin: 2% 5% 5% 0%;
+  }
+}
+
 #rightPanel {
-  background-color: #efefef;
-  z-index: 7;
-  padding: 30px 50px 30px 30px;
+  /* background-color: #efefef; */
+  background-color: #ffffff;
   color: rgba(0, 0, 0, 0.81);
+  border-radius: 5px;
 }
 
 /************************timeline**********************/

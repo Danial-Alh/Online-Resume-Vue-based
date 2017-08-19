@@ -187,7 +187,7 @@ Vue.mixin({
             content: 'n Country-wide University Entrance Exam <br> in more than 250,000 participants <br> Mathematics and Physics field',
             link: '',
           },
-          time: '22013',
+          time: '2013',
           details: [],
           layout: GeneralTimelineItem,
         },
