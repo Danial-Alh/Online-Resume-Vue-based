@@ -10,39 +10,51 @@
       </div>
     </div> -->
   <div class="skill">
-    {{item}}
+    <span class="skillName">{{item.name}}</span>
+    <div class="level" :style="{height:'8%', width: item.level+'%'}"></div>
   </div>
 </template>
 
 
 <script>
-export default {
-  name: 'skillComponent',
-  props: ['item'],
-};
+  export default {
+    name: 'SkillComponent',
+    props: ['item'],
+  };
 </script>
 
 <style scoped>
-.progress {
-  height: 2px;
-  margin: 0;
-}
+  .progress {
+    height: 2px;
+    margin: 0;
+  }
 
-.skill {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  margin-left: 10px;
-  background-color: #efefef;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  overflow-wrap: break-word;
-}
+  .skill {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 1em;
+    background-color: #efefef;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    /*border-radius: 10px 10px 0 0;*/
+    overflow-wrap: break-word;
+    overflow: hidden;
+  }
 
-.skillName {
-  display: flex;
-  width: 25%;
-  padding: 0;
-}
+  .level {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(57, 144, 210, 0.6);
+    z-index: 0;
+  }
+
+  .skillName {
+    display: flex;
+    mix-blend-mode: multiply;
+    color: #575a5c;
+    z-index: 1;
+  }
 </style>

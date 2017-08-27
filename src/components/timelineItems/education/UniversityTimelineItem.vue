@@ -10,12 +10,12 @@
         GPA: <b>{{education.gpa}}</b> / {{education.gpaTotalScore}}
       </p>
       <div>
-        <b-button size="sm" variant="secondary" class="subsectionTitle" @click="changeState">
+        <b-button size="sm" variant="outline-secondary" class="subsectionTitle" @click="changeState">
           <transition name="arrow" mode="out-in">
             <span class="material-icons subsectionIcon" v-if="displayImportantCourses" key="up-arrow">keyboard_arrow_up</span>
             <span class="material-icons subsectionIcon" v-else key="down-arrow">keyboard_arrow_down</span>
           </transition>
-          <span class="">Important Courses</span>
+          <span>Important Courses</span>
         </b-button>
         <transition name="courses">
           <ul v-if="displayImportantCourses">
@@ -104,11 +104,12 @@ export default {
 }
 
 .subsectionTitle {
-  color: #000000;
+  color: rgba(0, 0, 0, 0.8);
+  mix-blend-mode: multiply;
+  /*background-color: #c6c6c6;*/
   font-size: 20px;
   margin-top: 30px;
   margin-bottom: 10px;
-  /* width: 100%; */
   display: flex;
   align-items: center;
   align-content: center;
@@ -120,6 +121,8 @@ export default {
   font-size: 30px;
   width: 30px;
   height: 30px;
-  color: #000000;
+  color: rgba(0, 0, 0, 0.6);
+  mix-blend-mode: multiply;
+  /*background-color: #989898;*/
 }
 </style>

@@ -10,7 +10,7 @@ export default {
   name: 'BIOSOP',
   data() {
     return {
-      visible: false,
+      visible: true,
     };
   },
 };
@@ -18,7 +18,7 @@ export default {
 
 <style scoped>
 #bio-sop {
-  background-color: #b6bab8;
-  color: #282c34;
+  font-size: 4ex;
+  margin: 0 1em 0 10%;
 }
 </style>

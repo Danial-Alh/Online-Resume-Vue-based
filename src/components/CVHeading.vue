@@ -2,7 +2,6 @@
   <div class="row" id="title">
     <span class="col-md-5 col-md-offset-1 col-xs-6" id="titleName">{{identity.name}}</span>
     <span class="col-md-3 col-md-offset-3 col-xs-6" id="titlePicture">
-      <!--picture-->
       <img src="../assets/upic.jpg" class="img-square img-responsive">
     </span>
   </div>

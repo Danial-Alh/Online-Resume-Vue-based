@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container-fluid">
-    <CVHeading></CVHeading>
+    <!--<CVHeading></CVHeading>-->
     <CVBody></CVBody>
   </div>
 </template>
